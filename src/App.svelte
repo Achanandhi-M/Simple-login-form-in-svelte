@@ -18,13 +18,24 @@
 h1{
     text-align:center;
 	font-family:'Rubik', sans-serif;
-
 }
-form{
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70vh;
+  }
+  form {
+    background-color: white;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, 0.2);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
+  }
 label{
 	font-size:18px;
 	font-family:'Rubik', sans-serif;
@@ -53,6 +64,7 @@ button{
 }
 </style>
 <h1>Login</h1>
+<div class="Container">
 <form>
     <label for="name">Enter your Name:</label><br/>
     <input type="text" bind:value={text} on:input={handleInput}/><br/>
@@ -63,3 +75,5 @@ button{
     <h1>Hello {text}! and You logged in as {email}</h1>     
     {/if}
 </form>
+</div>
+
